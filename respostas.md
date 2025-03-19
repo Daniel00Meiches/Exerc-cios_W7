@@ -39,3 +39,40 @@ console.log("O produto dos valores é:", produto); // Saída: O produto dos valo
 2.
 
 <ins>**A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.**</ins>
+
+O passo-a-passo das duas funções são iguais e os valores do var compras e var limite são os mesmos, a única coisa que muda de uma função para a outra é a estrutura do loop:
+
+```javascript
+// Em analisarCredito1, o loop é um do while
+do {
+        totalCompras += compras[i];
+        i++;
+    } while (limite >= totalCompras && i < compras.length);
+
+// Em analisarCredito2, o loop é um while
+while (limite >= totalCompras && i < compras.length) {
+        totalCompras += compras[i];
+        i++;
+    }
+
+// Ambos os loops adicionam compras[i] à variável totalCompras
+```
+
+3.
+
+
+4.
+
+<ins>
+
+**D) Dispositivo 1 ligado. Energia restante: 900**
+
+**Dispositivo 2 ligado. Energia restante: 300**
+
+**Dispositivo 3 ligado com bateria extra. Energia restante: 200**
+
+**Dispositivo 4 não pode ser ligado. Energia insuficiente.**
+
+**Dispositivo 5 não pode ser ligado. Energia insuficiente.**
+
+</ins>
