@@ -76,3 +76,27 @@ while (limite >= totalCompras && i < compras.length) {
 **Dispositivo 5 não pode ser ligado. Energia insuficiente.**
 
 </ins>
+<br>
+Seguindo a lógica da programação, as primeiras duas vezes que o código passa pelo loop, vai ser subtraído 300 e 600 de 1200, fazendo com que haja 300 de energia disponível. 1200 - 300 = 900 - 600 = 300. Os dois primeiros dispositivos terão 900 e 300 de energia disponível, respectivamente. Isso quer dizer que a próxima vez que o código passar pelo loop (quando i = 2), 300 < 500, o que quer dizer que o primeiro if é falso, então o código verifica se o else if é verdadeiro. Será, o que quer dizer que o terceiro dispositivo pode ser ligado com bateria extra. Isso leva ao cálculo 400 - (500 - 300) = 200. Depois disso, os outros dispositivos não terão energia o suficiente para serem ligados.
+
+```javascript
+var energiaDisponivel = 1200;
+var bateriaExtra = 400;
+var consumoDispositivos = [300, 600, 500, 200, 400];
+
+for (var i = 0; i < consumoDispositivos.length; i++) {
+    var consumo = consumoDispositivos[i];
+
+    if (consumo <= energiaDisponivel) {
+        console.log("Dispositivo " + (i+1) + " ligado. Energia restante: " + (energiaDisponivel - consumo));
+        energiaDisponivel -= consumo; // Quando i = 0, energiaDisponivel = 900. Quando i = 1, energiaDisponivel = 300.
+    } else if (consumo <= energiaDisponivel + bateriaExtra) {
+        console.log("Dispositivo " + (i+1) + " ligado com bateria extra. Energia restante: " + ((energiaDisponivel + bateriaExtra) - consumo)); // Quando i = 2, no console.log a energiaDisponivel = 200
+        energiaDisponivel = 0;
+        bateriaExtra -= (consumo - energiaDisponivel); // Quando i = 2, energiaDisponivel = 0 e bateriaExtra = -100.
+    } else {
+        console.log("Dispositivo " + (i+1) + " não pode ser ligado. Energia insuficiente."); // Quando i = 3, não haverá mais energia disponível ou bateria extra, então os dispositivos 4 e 5 não poderão ser ligados
+    }
+}
+```
+
