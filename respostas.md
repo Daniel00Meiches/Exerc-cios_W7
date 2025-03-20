@@ -77,7 +77,7 @@ while (limite >= totalCompras && i < compras.length) {
 
 </ins>
 <br>
-Seguindo a lógica da programação, as primeiras duas vezes que o código passa pelo loop, vai ser subtraído 300 e 600 de 1200, fazendo com que haja 300 de energia disponível. 1200 - 300 = 900 - 600 = 300. Os dois primeiros dispositivos terão 900 e 300 de energia disponível, respectivamente. Isso quer dizer que a próxima vez que o código passar pelo loop (quando i = 2), 300 < 500, o que quer dizer que o primeiro if é falso, então o código verifica se o else if é verdadeiro. Será, o que quer dizer que o terceiro dispositivo pode ser ligado com bateria extra. Isso leva ao cálculo 400 - (500 - 300) = 200. Depois disso, os outros dispositivos não terão energia o suficiente para serem ligados.
+Seguindo a lógica da programação, as primeiras duas vezes que o código passa pelo loop, vai ser subtraído 300 e 600 de 1200, fazendo com que haja 300 de energia disponível. 1200 - 300 = 900 - 600 = 300. Os dois primeiros dispositivos terão 900 e 300 de energia disponível, respectivamente. Isso quer dizer que a próxima vez que o código passar pelo loop (quando i = 2), 300 < 500, o que quer dizer que o primeiro if é falso, então o código verifica se o else if é verdadeiro. Será, o que quer dizer que o terceiro dispositivo pode ser ligado com bateria extra. Depois, isso leva ao cálculo 400 - (500 - 0) = -100. Com isso, não haverá mais bateria extra disponível, então os outros dispositivos não terão energia o suficiente para serem ligados.
 
 ```javascript
 var energiaDisponivel = 1200;
