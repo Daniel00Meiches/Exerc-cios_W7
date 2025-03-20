@@ -99,4 +99,19 @@ for (var i = 0; i < consumoDispositivos.length; i++) {
     }
 }
 ```
+5.
 
+<ins>**B) O método update() é chamado continuamente a cada quadro (frame) do jogo, sendo usado para atualizar a lógica, movimentação e interações dos objetos na cena.**</ins>
+<br>
+Vou tentar justificar com um exemplo pessoal. Os jogos que eu já desenvolvi com o Phaser, eu sempre implementava os controles do jogador no método update(), pois nele, toda vez que o jogador pressionar uma tecla, o método update terá que atualizar no exato momento em que a tecla é pressionada para os controles serem responsivos. Isso também se aplica a atualizações constantes sendo feitas ao placar dos meus jogos toda vez que meu personagem controlável colecionar um coletável.
+
+6.
+
+<ins>**A) Simular física avançada, incluindo corpos rígidos, colisões complexas e interação entre objetos com gravidade e forças.**</ins>
+<br>
+A documentação oficial do Phaser comprova isso. Aqui está um trecho traduzido:
+```
+"O Matter Physics World fornece uma simulação mais avançada e realista de interações físicas em comparação ao Arcade Physics. Construído na biblioteca Matter.js, ele permite comportamento físico mais complexo, como dinâmica de corpo rígido, restrições e detecção avançada de colisão."
+```
+
+7.
