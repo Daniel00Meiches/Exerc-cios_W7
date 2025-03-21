@@ -60,6 +60,9 @@ while (limite >= totalCompras && i < compras.length) {
 
 3.
 
+<ins>**B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você é um adulto!". Caso contrário, verifica se é menor de idade e exibe "Você é menor de idade!". Se nenhuma das condições anteriores for verdadeira, exibe "Você está na melhor idade!".**</ins>
+<br>
+O código vai seguir a ordem descrita no item B. Todos os condicionais nesse código têm um console.log caso tal condição for verdadeira.
 
 4.
 
@@ -115,3 +118,26 @@ A documentação oficial do Phaser comprova isso. Aqui está um trecho traduzido
 ```
 
 7.
+
+```javascript
+var compras = [40.50, 20.50, 10.25, 30.85, 65.90];
+var totalCompras = 0;
+
+// Loop que vai fazer a soma dos preços dos produtos que serão comprados
+for (i = 0; i < compras.length; i++) {
+    totalCompras += compras[i]; // Ao final do loop, totalCompras = 168
+}
+
+console.log(`O preço total de suas compras é R$ ${totalCompras.toFixed(2)}`); // Saída: O preço total de suas compras é R$ 168.00
+
+// Instrução if que vai avaliar se haverá frete baseado no preço total das compras
+if (totalCompras < 50) {
+    console.log("Frete não disponível!");
+} else if (totalCompras >= 50 && totalCompras <= 199.99) {
+    console.log("Frete com custo adicional!");
+} else {
+    console.log("Frete grátis!");
+}
+```
+
+8.
