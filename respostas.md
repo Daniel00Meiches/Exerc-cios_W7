@@ -141,3 +141,48 @@ if (totalCompras < 50) {
 ```
 
 8.
+
+```javascript
+// Veículo
+class Veiculo {
+    constructor(modelo, ano, quilometragem, litrosAbastecidos) {
+        this.modelo = modelo;
+        this.ano = ano;
+        this.quilometragem = quilometragem;
+        this.litrosAbastecidos = litrosAbastecidos;
+    }
+
+    calcularConsumo() {
+        return this.quilometragem / this.litrosAbastecidos; // Cálculo do consumo do veículo
+    }
+}
+
+// Carro
+class Carro extends Veiculo {
+    constructor(modelo, ano, numPassageiros, combustivel, quilometragemInicial, quilometragemFinal, litrosAbastecidos) {
+        super(modelo, ano, litrosAbastecidos);
+        this.numPassageiros = numPassageiros;
+        this.combustivel = combustivel;
+        this.quilometragemI = quilometragemInicial;
+        this.quilometragemF = quilometragemFinal;
+    }
+
+    calcularConsumo() {
+        return (this.quilometragemF - this.quilometragemI) / this.litrosAbastecidos;
+    }
+
+}
+
+// Moto
+class Moto extends Veiculo {
+    constructor(modelo, ano, guidão, exaustão, quilometragem, litrosAbastecidos) {
+        super(modelo, ano, quilometragem, litrosAbastecidos);
+        this.guidao = guidão;
+        this.exaustao = exaustão;
+    }
+
+    calcularConsumo() {
+        return this.quilometragem / this.litrosAbastecidos;
+    }
+}
+```
