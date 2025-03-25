@@ -181,3 +181,47 @@ class Moto extends Veiculo {
     }
 }
 ```
+
+9.
+
+10.
+
+```javascript
+var investimentosAno1 = [[1000, 2000], [1500, 2500]];
+var investimentosAno2 = [[1200, 1800], [1300, 2700]];
+
+
+// A função que fará a multiplicação
+function multiplicarMatrizesInvestimento(matrizA, matrizB) {
+
+    if (matrizA.length !== matrizB.length) {
+        return "As matrizes não podem ser somadas. Elas têm dimensões diferentes.";
+    } else {
+        // Colunas e linhas de ambas as matrizes. Vão ser usadas em um loop que fará a multiplicação
+        var colunasA = matrizA.length; 
+        var linhasA  = matrizA[0].length;
+        var colunasB = matrizB.length; 
+
+        // Variável que vai armazenar os resultados da multiplicação de matrizes
+        var matrizResultado = [];
+
+        // Multiplicação será feito baseado no produto escalar das linhas da matrizA com as colunas da matrizB
+        for (i = 0; i < linhasA; i++) {
+            matrizResultado[i] = [];
+
+            for (var j = 0; j < colunasB; j++) {
+                matrizResultado[i][j] = 0;  // Inicia com 0
+                
+                for (var k = 0; k < colunasA; k++) {
+                matrizResultado[i][j] += matrizA[i][k] * matrizB[k][j];
+                }
+           }
+        }
+        return matrizResultado; // Retorna o valor à função após a realização dos cálculos
+    }
+}
+
+// Teste do código
+var totalInvestimentos = multiplicarMatrizesInvestimento(investimentosAno1, investimentosAno2);
+console.log(totalInvestimentos);
+```
