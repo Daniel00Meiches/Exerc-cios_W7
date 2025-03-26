@@ -187,8 +187,13 @@ class Moto extends Veiculo {
 10.
 
 ```javascript
-var investimentosAno1 = [[1000, 2000], [1500, 2500]];
-var investimentosAno2 = [[1200, 1800], [1300, 2700]];
+// As matrizes que serão utilizadas para testar o código
+var investimentosAno1 =
+[[1000, 2000],  // Linha 1
+ [1500, 2500]]; // Linha 2
+var investimentosAno2 =
+[[1200, 1800],  // Linha 1
+ [1300, 2700]]; // Linha 2
 
 
 // A função que fará a multiplicação
@@ -206,14 +211,14 @@ function multiplicarMatrizesInvestimento(matrizA, matrizB) {
         var matrizResultado = [];
 
         // Multiplicação será feito baseado no produto escalar das linhas da matrizA com as colunas da matrizB
-        for (i = 0; i < linhasA; i++) {
+        for (i = 0; i < linhasA; i++) {              // Vai atravessar pelas linhas da matrizA
             matrizResultado[i] = [];
 
-            for (var j = 0; j < colunasB; j++) {
+            for (var j = 0; j < colunasB; j++) {     // Vai atravessar pelas colunas da matrizB
                 matrizResultado[i][j] = 0;  // Inicia com 0
                 
-                for (var k = 0; k < colunasA; k++) {
-                matrizResultado[i][j] += matrizA[i][k] * matrizB[k][j];
+                for (var k = 0; k < colunasA; k++) { // Vai atravessar pelas colunas da matrizA
+                matrizResultado[i][j] += matrizA[i][k] * matrizB[k][j]; // Em matrizA[i][k], o i representa a posição/index da linha e o k representa a posição/index da coluna. Então, matrizA[0][0] = 1000 e matrizA[0][1] = 2000. Essa mesma ideia se aplica para a matrizB[k][j]
                 }
            }
         }
