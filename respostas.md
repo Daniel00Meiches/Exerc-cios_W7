@@ -184,6 +184,38 @@ class Moto extends Veiculo {
 
 9.
 
+```
+// Variáveis
+velocidadeInicial    = valor
+velocidade_pouso     = valor
+tempo_max            = valor
+desacelaracao        = valor
+limite_desaceleracao = valor
+
+tempo = 0
+velocidade = velocidade_inicial
+
+// Loop que atualiza a velocidade enquanto o valor da velocidade não 
+enquanto velocidade > velocidade_pouso && tempo <= tempo_maximo {
+    velocidade = velocidade_inicial - desaceleracao * tempo
+    tempo += 1;
+
+    // verificar se a desaceleração não ultrapassa seu limite estabelecido
+    se desaceleracao < limite_desaceleracao {
+        print 'Ajuste a taixa de desaceleração pois ela está baixa'
+    }
+}
+
+// Printar caso a sonda conseguiu chegar na velocidade segura dentro do tempo
+se velocidade <= velocidade_segura {
+    print  `Foi um pouso bem sucedido. Foi feito em ${tempo} segundos`
+}
+
+// Printar caso o tempo excedeu o limite e a velocidade segura não foi atingida
+se tempo > tempo_max {
+    print "O tempo máximo foi ultrapassado e a sonda não pousou com segurança"
+}
+```
 
 10.
 
