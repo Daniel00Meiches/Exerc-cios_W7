@@ -18,7 +18,7 @@ let r = 6;
 // Se eu fosse incluir o valor das variáveis no lugar das letras:
 // 10 % 3 === 1 --> isso está correto
 // 6 * 2 > 10 ---> isso também está correto, então a primeira condição é verdadeira, o que faz com que o booleano seja true
-// 3 + 6 < 10 ---> isso está errado, mas não importa pois a outra condição desse booleano é verdadeira
+// 3 + 6 < 10 ---> isso está também está certo, mas não importaria se tivesse errado pois a outra condição desse booleano é verdadeira também
 let resultado = (p % q === 1) && (r * 2 > p) || (q + r < p);
 console.log(resultado); // Saída: true
 ```
@@ -183,6 +183,7 @@ class Moto extends Veiculo {
 ```
 
 9.
+
 
 10.
 
